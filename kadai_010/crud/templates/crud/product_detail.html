@@ -1,4 +1,25 @@
-<h1>{{ object.name }}</h1>
-<p>価格: {{ object.price }}</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>商品詳細</title>
+</head>
+<body>
+    <h1>商品詳細</h1>
+    <h2>{{ object.name }}</h2>
+    
+    <table>
+        <tr>
+            <th>商品名</th>
+            <td>{{ object.pk }}</td>
+        </tr>
+        <tr>
+            <th>価格</th>
+            <td>{{ object.price }}円</td>
+        </tr>
+    </table>
+    
+    <p><a href="{% url 'crud:product_list' %}">一覧へ戻る</a></p>
 
-<a href="{% url 'product_list' %}">一覧に戻る</a>
+</body>
+</html>
