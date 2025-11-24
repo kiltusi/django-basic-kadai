@@ -16,8 +16,8 @@
    <tr>
        <td>{{ product.name }}</td>
        <td>{{ product.price }} 円</td>
-       <tb href="{% url 'product_detail' product.pk %}">
-           {{ product.name }}
+       <tb>
+        <a href="{% url 'product_detail' pk=product.pk %}">詳細</a>
        </tb>
 　　　　<td>
             <button class="btn btn-primary" onclick="location.href='{% url 'edit' pk=product.pk %}'">編集</button>
